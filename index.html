@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa de Procesos Dinamico</title>
+    <link rel="stylesheet" href="css/mapa-procesos.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div>
+          <h1>Panaderia del 12</h1>
+          <div class="status">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="fecha">Sistema de Gestion de la Calidad Dinamico</span>
+          </div>
+        </div>
+        <button id="toggleAlert" class="btn" type="button">Modo Normal</button>
+      </header>
+
+      <main class="layout">
+        <aside class="side in">
+          <h2>Entradas</h2>
+          <div class="icon">👥</div>
+          <strong style="display:block;text-align:center;">Necesidades del Cliente</strong>
+          <p style="font-size:12px;color:#475569;text-align:center;line-height:1.45;">
+            Requerimientos de calidad, higiene y sabor en Valledupar.
+          </p>
+        </aside>
+
+        <section class="center">
+          <section class="section">
+            <h3>Procesos Estrategicos</h3>
+            <div class="grid-2" id="strategicGrid"></div>
+          </section>
+
+          <section class="section oper">
+            <h3>Procesos Operativos (Misionales)</h3>
+            <div class="grid-5" id="operationalGrid"></div>
+          </section>
+
+          <section class="section">
+            <h3>Procesos de Soporte</h3>
+            <div class="grid-3" id="supportGrid"></div>
+          </section>
+        </section>
+
+        <aside class="side out">
+          <h2>Salidas</h2>
+          <div class="icon">📈</div>
+          <strong style="display:block;text-align:center;">Clientes Satisfechos</strong>
+          <p style="font-size:12px;color:#475569;text-align:center;line-height:1.45;">
+            Productos de calidad y rentabilidad economica.
+          </p>
+        </aside>
+      </main>
+
+      <footer>
+        Basado en el diagnostico organizacional de la Panaderia del 12 - Valledupar, Colombia
+      </footer>
+    </div>
+
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="panel">
+        <div id="panelHead" class="panel-head">
+          <div>
+            <h3 id="panelTitle" class="panel-title"></h3>
+            <p class="panel-sub">Detalle del Proceso</p>
+          </div>
+          <button id="closeTop" class="close" type="button" aria-label="Cerrar">✕</button>
+        </div>
+        <div class="panel-body">
+          <h4 class="block-title">Descripcion</h4>
+          <p id="panelDesc" class="desc"></p>
+
+          <h4 class="block-title" style="margin-top:14px;">Indicadores en Vivo (Simulados)</h4>
+          <div id="panelStats" class="stats"></div>
+
+          <button id="closeBottom" class="close-main" type="button">Cerrar Panel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/mapa-procesos.js"></script>
+  </body>
+</html>
