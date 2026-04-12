@@ -200,14 +200,20 @@ body.modal-open .wrap {
 }
 
 .grid-2 {
+  display: grid;
+  gap: 10px;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-3 {
+  display: grid;
+  gap: 10px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-5 {
+  display: grid;
+  gap: 10px;
   grid-template-columns: repeat(5, 1fr);
 }
 
