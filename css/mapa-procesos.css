@@ -6,20 +6,13 @@
   --line: #dde3eb;
   --blue-50: #eff6ff;
   --blue-200: #bfdbfe;
-  background: rgba(12, 18, 30, 0.22);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  --orange-50: #fff7ed;
+  --orange-300: #fdba74;
   --gray-50: #f9fafb;
   --gray-200: #e5e7eb;
   --amber-100: #fef3c7;
   --amber-300: #fcd34d;
   --emerald-100: #d1fae5;
-
-body.modal-open .wrap {
-  filter: blur(3px);
-  transform: scale(0.995);
-  transition: filter 0.18s ease, transform 0.18s ease;
-}
   --emerald-300: #6ee7b7;
 }
 
@@ -31,13 +24,23 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
-  background: rgba(12, 18, 30, 0.28);
-  backdrop-filter: blur(2.5px);
+  background: radial-gradient(circle at top right, #ffffff 0%, var(--bg) 42%, #eef2f7 100%);
+}
 
 .wrap {
-  width: min(1180px, 94vw);
-  margin: 0 auto;
-  padding: 24px 0 28px;
+  width: 100%;
+  margin: 0;
+  padding: 20px 24px 28px;
+}
+
+body.modal-open .wrap {
+  filter: blur(3px);
+  transform: scale(0.995);
+  transition: filter 0.18s ease, transform 0.18s ease;
+}
+
+.header {
+  background: var(--card);
   border: 1px solid #edf1f6;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(7, 20, 43, 0.05);
