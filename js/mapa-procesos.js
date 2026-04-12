@@ -1,105 +1,105 @@
 const processDetails = {
-  "Gestion Gerencial": {
+  "Gestión Gerencial": {
     icon: "⚙️",
     tone: "blue",
-    text: "Revision de inventarios, reportes diarios y toma de decisiones estrategicas.",
+    text: "Revisión de inventarios, reportes diarios y toma de decisiones estratégicas.",
     stats: {
-      "Inventario Critico": "Harina (15kg)",
+      "Inventario Crítico": "Harina (15 kg)",
       "Ventas Hoy": "$450,000",
       Decisiones: "Pendiente pedido levadura"
     }
   },
-  "Gestion de Calidad": {
+  "Gestión de Calidad": {
     icon: "✅",
     tone: "blue",
-    text: "Mejora continua, seguimiento de objetivos y evaluacion de procesos segun estandares.",
+    text: "Mejora continua, seguimiento de objetivos y evaluación de procesos según estándares.",
     stats: {
-      Auditoria: "98% Cumplimiento",
+      Auditoría: "98% Cumplimiento",
       "No conformidades": "1",
-      "Proxima Revision": "15 de Oct"
+      "Próxima Revisión": "15 de oct."
     }
   },
-  "Alistamiento y Preparacion": {
+  "Alistamiento y Preparación": {
     icon: "🧾",
     tone: "orange",
-    text: "Preparacion inicial de insumos, mise en place y organizacion de trabajo.",
+    text: "Preparación inicial de insumos, mise en place y organización de trabajo.",
     stats: {
       "Insumos listos": "96%",
       "Tiempo alistamiento": "22 min",
       Estado: "En curso"
     }
   },
-  "Elaboracion de Masas": {
+  "Elaboración de Masas": {
     icon: "🥣",
     tone: "orange",
-    text: "Mezclado, amasado y control de formula para cada referencia.",
+    text: "Mezclado, amasado y control de fórmula para cada referencia.",
     stats: {
       "Lotes activos": "6",
-      Hidratacion: "Controlada",
+      Hidratación: "Controlada",
       Estado: "Amasado"
     }
   },
-  "Horneado y Estabilizacion": {
+  "Horneado y Estabilización": {
     icon: "🔥",
     tone: "orange",
-    text: "Coccion por tiempos y temperaturas estandar y estabilizacion post-horno.",
+    text: "Cocción por tiempos y temperaturas estándar, y estabilización post-horno.",
     stats: {
       "Temp. Horno": "180C",
       "Ciclos hoy": "14",
-      Estado: "Produccion"
+      Estado: "Producción"
     }
   },
   "Calidad Interna y Empaque": {
     icon: "📦",
     tone: "orange",
-    text: "Control de calidad final, porcionado y empaque para venta y distribucion.",
+    text: "Control de calidad final, porcionado y empaque para venta y distribución.",
     stats: {
       "Conformes": "98%",
       "Reproceso": "2%",
       Estado: "Empacando"
     }
   },
-  "Exhibicion y Apertura": {
+  "Exhibición y Apertura": {
     icon: "🏪",
     tone: "orange",
-    text: "Montaje de vitrina y alistamiento del punto para inicio de atencion.",
+    text: "Montaje de vitrina y alistamiento del punto para inicio de atención.",
     stats: {
       Vitrina: "Completa",
       "Hora apertura": "6:00 AM",
       Estado: "Abierto"
     }
   },
-  "Servicio y Comercializacion": {
+  "Servicio y Comercialización": {
     icon: "☕",
     tone: "orange",
-    text: "Atencion al cliente, venta y gestion comercial en mostrador y canales.",
+    text: "Atención al cliente, venta y gestión comercial en mostrador y canales.",
     stats: {
       Trafico: "Medio",
       Conversion: "85%",
       Ticket: "$18,400"
     }
   },
-  "Fidelizacion y Resolucion": {
+  "Fidelización y Resolución": {
     icon: "🤝",
     tone: "orange",
-    text: "Seguimiento posventa, retencion y solucion de PQRs.",
+    text: "Seguimiento posventa, retención y solución de PQRs.",
     stats: {
       "Nuevos miembros": "5",
       "PQRs abiertas": "0",
       Retencion: "92%"
     }
   },
-  "Compras y Almacen": {
+  "Compras y Almacén": {
     icon: "🛒",
     tone: "gray",
     text: "Manejo eficiente de proveedores e insumos frescos.",
     stats: {
       Proveedores: "12",
       "Entregas Hoy": "2",
-      "Dias Stock": "4 dias"
+      "Días de stock": "4 días"
     }
   },
-  "Gestion Financiera": {
+  "Gestión Financiera": {
     icon: "💳",
     tone: "gray",
     text: "Apertura/cierre de caja, control de flujo de efectivo y ventas.",
@@ -114,26 +114,26 @@ const processDetails = {
     tone: "gray",
     text: "Limpieza profunda y cuidado preventivo de maquinaria.",
     stats: {
-      "Ultimo Aseo": "Hace 2h",
+      "Último Aseo": "Hace 2 h",
       "Equipos OK": "100%",
-      "Proximo Mantenimiento": "En 3 dias"
+      "Próximo Mantenimiento": "En 3 días"
     }
   }
 };
 
-const strategic = ["Gestion Gerencial", "Gestion de Calidad"];
+const strategic = ["Gestión Gerencial", "Gestión de Calidad"];
 const operationalInternal = [
-  "Alistamiento y Preparacion",
-  "Elaboracion de Masas",
-  "Horneado y Estabilizacion",
+  "Alistamiento y Preparación",
+  "Elaboración de Masas",
+  "Horneado y Estabilización",
   "Calidad Interna y Empaque"
 ];
 const operationalExternal = [
-  "Exhibicion y Apertura",
-  "Servicio y Comercializacion",
-  "Fidelizacion y Resolucion"
+  "Exhibición y Apertura",
+  "Servicio y Comercialización",
+  "Fidelización y Resolución"
 ];
-const support = ["Compras y Almacen", "Gestion Financiera", "Mantenimiento y Aseo"];
+const support = ["Compras y Almacén", "Gestión Financiera", "Mantenimiento y Aseo"];
 
 const modalEnabledProcesses = new Set([...operationalInternal, ...operationalExternal]);
 
@@ -156,7 +156,7 @@ const diagramHint = document.getElementById("diagramHint");
 const diagramCanvas = document.getElementById("diagramCanvas");
 const fecha = document.getElementById("fecha");
 
-fecha.textContent = "Sistema de Gestion de la Calidad Dinamico - " + new Date().toLocaleDateString("es-CO");
+fecha.textContent = "Sistema de Gestión de la Calidad Dinámico - " + new Date().toLocaleDateString("es-CO");
 
 const CHARACTERIZATION_FIELDS = [
   { key: "objective", label: "OBJETIVO", type: "textarea", rows: 2 },
@@ -206,10 +206,10 @@ function buildCharacterizationDefaults(title) {
     workGroup: isStrategic ? "Equipo administrativo" : "Equipo operativo",
     internalSupplier: "Proceso anterior / proveedores internos",
     internalClient: "Area usuaria / siguiente proceso",
-    supportProcesses: "Compras y Almacen, Gestion Financiera y Mantenimiento y Aseo",
+    supportProcesses: "Compras y Almacén, Gestión Financiera y Mantenimiento y Aseo",
     documents: "Procedimiento, instructivo y formatos asociados.",
-    records: "Registro de control, bitacora y evidencias.",
-    resources: "Personal, equipos, insumos y sistema de informacion.",
+    records: "Registro de control, bitácora y evidencias.",
+    resources: "Personal, equipos, insumos y sistema de información.",
     indicator: "Cumplimiento del proceso (%)",
     target: ">= 95%",
     diagramHtml: ""
@@ -293,7 +293,7 @@ function createCard(title) {
     card.classList.add("danger");
     const warning = document.createElement("div");
     warning.className = "warn";
-    warning.textContent = "REVISION NECESARIA";
+    warning.textContent = "REVISIÓN NECESARIA";
     card.appendChild(warning);
   }
 
@@ -342,7 +342,7 @@ function openModal(title) {
   activeProcessTitle = title;
   panelTitle.textContent = cleanModalText(details.icon + " " + title);
   sheetProcess.textContent = cleanModalText(title);
-  diagramHint.textContent = "Pega aqui tu diagrama de flujo o imagen del proceso: " + cleanModalText(title) + " (Ctrl+V).";
+  diagramHint.textContent = "Pega aquí tu diagrama de flujo o imagen del proceso: " + cleanModalText(title) + " (Ctrl+V).";
   versionField.value = getCharacterization(title).version;
   dateField.value = getCharacterization(title).date;
   pageField.value = getCharacterization(title).page;
