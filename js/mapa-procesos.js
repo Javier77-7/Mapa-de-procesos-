@@ -154,7 +154,6 @@ const dateField = document.getElementById("dateField");
 const pageField = document.getElementById("pageField");
 const diagramHint = document.getElementById("diagramHint");
 const diagramCanvas = document.getElementById("diagramCanvas");
-const saveAllBtn = document.getElementById("saveAllBtn");
 const fecha = document.getElementById("fecha");
 
 fecha.textContent = "Sistema de Gestión de la Calidad Dinámico - " + new Date().toLocaleDateString("es-CO");
@@ -191,49 +190,6 @@ function loadCharacterizationStore() {
 
 function saveCharacterizationStore() {
   localStorage.setItem(CHARACTERIZATION_STORAGE_KEY, JSON.stringify(characterizationStore));
-}
-
-function encodeStateToUrl(state) {
-  const json = JSON.stringify(state);
-  const bytes = new TextEncoder().encode(json);
-  let binary = "";
-  bytes.forEach(function (byte) {
-    binary += String.fromCharCode(byte);
-  });
-  return encodeURIComponent(btoa(binary));
-}
-
-function decodeStateFromUrl(encoded) {
-  const binary = atob(decodeURIComponent(encoded));
-  const bytes = Uint8Array.from(binary, function (char) {
-    return char.charCodeAt(0);
-  });
-  const json = new TextDecoder().decode(bytes);
-  return JSON.parse(json);
-}
-
-function applyStateFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const encoded = params.get("state");
-  if (!encoded) {
-    return;
-  }
-
-  try {
-    const sharedState = decodeStateFromUrl(encoded);
-    if (sharedState && typeof sharedState === "object") {
-      characterizationStore = { ...characterizationStore, ...sharedState };
-      saveCharacterizationStore();
-    }
-  } catch (error) {
-    // Keep local state if shared URL is malformed.
-  }
-}
-
-function updateShareUrl() {
-  const encoded = encodeStateToUrl(characterizationStore);
-  const target = window.location.origin + window.location.pathname + "?state=" + encoded;
-  window.history.replaceState({}, "", target);
 }
 
 
@@ -310,7 +266,6 @@ function cleanModalText(value) {
 
 let characterizationStore = loadCharacterizationStore();
 let activeProcessTitle = "";
-applyStateFromUrl();
 
 function createCard(title) {
   const details = processDetails[title];
@@ -436,12 +391,6 @@ diagramCanvas.addEventListener("input", function () {
     return;
   }
   setCharacterizationField(activeProcessTitle, "diagramHtml", diagramCanvas.innerHTML);
-});
-
-saveAllBtn.addEventListener("click", function () {
-  saveCharacterizationStore();
-  updateShareUrl();
-  alert("Información guardada correctamente. El enlace actual ya contiene los datos guardados.");
 });
 
 document.getElementById("closeTop").addEventListener("click", closeModal);
