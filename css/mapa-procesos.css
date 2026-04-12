@@ -573,6 +573,26 @@ body.modal-open .side::after {
   font-size: 0.86rem;
 }
 
+.save-actions {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.save-main {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.save-main {
+  background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%);
+  color: #fff;
+}
+
 .sheet-topbar {
   display: grid;
   grid-template-columns: 140px 1fr 230px;

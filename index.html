@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa de Procesos Dinámico</title>
-    <link rel="stylesheet" href="css/mapa-procesos.css?v=20" />
+    <link rel="stylesheet" href="css/mapa-procesos.css?v=22" />
   </head>
   <body>
     <div class="wrap">
@@ -127,12 +127,15 @@
               <p id="diagramHint">Pega aquí tu diagrama de flujo o imagen del proceso (Ctrl+V).</p>
             </div>
             <div id="diagramCanvas" class="diagram-canvas" contenteditable="true" role="textbox" aria-label="Zona para pegar diagrama"></div>
+            <div class="save-actions">
+              <button id="saveAllBtn" class="save-main" type="button">Guardar</button>
+            </div>
             <button id="closeBottom" class="close-main" type="button">Cerrar Panel</button>
           </section>
         </div>
       </div>
     </div>
 
-    <script src="js/mapa-procesos.js?v=15"></script>
+    <script src="js/mapa-procesos.js?v=18"></script>
   </body>
 </html>
