@@ -538,7 +538,8 @@ body.modal-open .side::after {
 
 .diagram-canvas {
   margin-top: 10px;
-  min-height: 180px;
+  min-height: 420px;
+  max-height: 72vh;
   border: 2px dashed #b8c2d6;
   border-radius: 12px;
   background: repeating-linear-gradient(
@@ -551,6 +552,32 @@ body.modal-open .side::after {
   padding: 12px;
   color: #374151;
   outline: none;
+  overflow: auto;
+}
+
+.diagram-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+  margin: 0 auto;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.08) saturate(1.05) brightness(0.98);
+}
+
+.diagram-image.diagram-fixed {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-canvas.locked {
+  border-style: solid;
+  border-color: #c8d2e5;
+  background: #ffffff;
+  cursor: default;
 }
 
 .diagram-canvas:empty::before {
