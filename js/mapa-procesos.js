@@ -69,24 +69,14 @@ const processDetails = {
       Estado: "Abierto"
     }
   },
-  "Servicio y Comercialización": {
+  "COMERCIALIZACIÓN y fidelización": {
     icon: "☕",
     tone: "orange",
-    text: "Atención al cliente, venta y gestión comercial en mostrador y canales.",
+    text: "Atención al cliente, venta, posventa, fidelización y resolución de PQRs.",
     stats: {
       Trafico: "Medio",
       Conversion: "85%",
       Ticket: "$18,400"
-    }
-  },
-  "Fidelización y Resolución": {
-    icon: "🤝",
-    tone: "orange",
-    text: "Seguimiento posventa, retención y solución de PQRs.",
-    stats: {
-      "Nuevos miembros": "5",
-      "PQRs abiertas": "0",
-      Retencion: "92%"
     }
   },
   "Compras y Almacén": {
@@ -130,8 +120,7 @@ const operationalInternal = [
 ];
 const operationalExternal = [
   "Exhibición y Apertura",
-  "Servicio y Comercialización",
-  "Fidelización y Resolución"
+  "COMERCIALIZACIÓN y fidelización"
 ];
 const support = ["Compras y Almacén", "Gestión Financiera", "Mantenimiento y Aseo"];
 
@@ -281,55 +270,33 @@ const FIXED_PROCESS_CHARACTERIZATIONS = {
     target: "Apertura puntual diaria, rotación óptima de productos, disponibilidad de productos",
     diagramHtml: ""
   },
-  "Servicio y Comercialización": {
+  "COMERCIALIZACIÓN y fidelización": {
     version: "1",
     date: "7/04/2026",
-    page: "6 DE 7",
-    process: "Servicio y comercialización de productos de panadería y repostería.",
+    page: "6 DE 6",
+    process: "Comercialización y Fidelización.",
     objective:
       "Garantizar una atención oportuna y cordial al cliente mediante la recepción, asesoría, toma de pedido, cobro y entrega del producto, asegurando satisfacción y una experiencia de compra adecuada.",
     scope:
-      "Desde la recepción del cliente en el punto de venta hasta la entrega del pedido, pago y servicio en mesa cuando aplique.",
+      "Inicia con el alistamiento del punto de venta y la recepción del cliente, abarca toda la atención, servicio en mesa y resolución de dudas/inconformidades, y finaliza con el agradecimiento al cliente.",
     responsible: "Gerente.",
-    workGroup: "Cajero y empleado de servicio o mesero.",
+    workGroup: "Cajero, empleado de servicio y gerente.",
     internalSupplier:
-      "Interno: Proceso de exhibición y apertura; proceso de calidad interna y empaque.\nExterno: No aplica.",
-    internalClient: "Interno: Proceso de fidelización y resolución.\nExterno: Cliente final.",
-    supportProcesses: "Gestión financiera, control de calidad, limpieza y desinfección, gestión de inventarios.",
-    documents:
-      "Procedimiento de atención al cliente, políticas comerciales, instructivo de manejo del sistema POS, protocolo de servicio.",
-    records: "Registro de ventas, facturas o tickets, control de pedidos, registro de pagos.",
-    resources: "Humanos, físicos y tecnológicos.",
-    indicator:
-      "Tiempo de atención al cliente, porcentaje de pedidos entregados correctamente, nivel de satisfacción del cliente.",
-    target:
-      "Cumplir con la atención oportuna del 100% de los clientes, entregar correctamente los pedidos y mantener altos niveles de satisfacción.",
-    diagramHtml: ""
-  },
-  "Fidelización y Resolución": {
-    version: "1",
-    date: "7/04/2026",
-    page: "7 DE 7",
-    process: "Fidelización y resolución de clientes de la Panadería del 12.",
-    objective:
-      "Atención de quejas, aplicación de soluciones, agradecimiento por la compra y promoción de la recompra, fortaleciendo la relación comercial con la panadería.",
-    scope:
-      "Desde la finalización de la venta o prestación del servicio hasta la atención de quejas, seguimiento de la satisfacción y ejecución de acciones de fidelización al cliente.",
-    responsible: "Empleado de servicio / mesero.",
-    workGroup: "Empleado de servicio, cajero y gerente general cuando se requiera la resolución de casos especiales.",
-    internalSupplier: "Interno: Proceso de servicio y comercialización.\nExterno: No aplica.",
+      "Interno: Proceso de exhibición y apertura; proceso de calidad interna y empaque.\nExterno: Proveedores de pasarelas de pago (Datáfono/POS).",
     internalClient:
-      "Interno: Gestión gerencial y gestión de calidad, como procesos que pueden usar la información para mejora.\nExterno: Cliente final.",
-    supportProcesses: "Gestión de calidad, gestión gerencial, gestión financiera, limpieza y desinfección.",
+      "Interno: Proceso de Gestión Gerencial (recibe el dinero y el reporte de ventas); Gestión de Calidad (recibe reportes de quejas para mejora).\nExterno: Clientes finales y comunidad de Valledupar.",
+    supportProcesses:
+      "Gestión Financiera (recaudo), Gestión de Calidad (medición de satisfacción), Mantenimiento y Aseo (limpieza del área de consumo).",
     documents:
-      "Protocolo de atención al cliente, procedimiento para manejo de quejas y reclamos, políticas de fidelización, instructivo de servicio.",
+      "Procedimiento de atención al cliente, políticas comerciales, lista de precios de vitrina, instructivo de manejo del sistema POS, protocolo de servicio.",
     records:
-      "Registro de quejas y reclamos, registro de satisfacción del cliente, control de clientes frecuentes, registro de acciones correctivas frente al servicio.",
-    resources: "Humanos, físicos y tecnológicos.",
+      "Factura o ticket de pago, reporte diario de ventas y cuadre de caja, buzón o formato de PQRs, registro de clientes frecuentes, formato de medición de satisfacción.",
+    resources:
+      "Caja registradora, vitrinas de exhibición, mesas para consumo, empaques y bolsas ecológicas, tarjetas de fidelidad, formularios de PQRs.",
     indicator:
-      "Nivel de satisfacción del cliente, número de quejas atendidas, porcentaje de reclamos resueltos, porcentaje de clientes recurrentes.",
+      "Nivel de satisfacción del cliente, porcentaje de quejas resueltas en el primer contacto, tasa de retención/retorno de clientes, precisión del cuadre de caja diario.",
     target:
-      "Atender el 100% de las quejas y reclamos, mantener altos niveles de satisfacción y promover la recompra y fidelización del cliente.",
+      "Alcanzar un 95% de satisfacción del cliente, resolver el 100% de las quejas presentadas de forma satisfactoria y mantener un cuadre de caja diario con 100% de precisión.",
     diagramHtml: ""
   }
 };
@@ -344,8 +311,7 @@ const PROCESS_DIAGRAMS = {
   "Horneado y Estabilización": "img/proceso%20de%20horneado.jpg",
   "Calidad Interna y Empaque": "img/inspencion%20y%20comerlizacion.jpg",
   "Exhibición y Apertura": "img/apertura%20de%20establecimiento.jpg",
-  "Servicio y Comercialización": "img/proceso%20de%20servicio%20al%20cliente.png",
-  "Fidelización y Resolución": "img/fedelizacion.png"
+  "COMERCIALIZACIÓN y fidelización": "img/Comercializacion_Fidelizacion.png"
 };
 
 function isDiagramLockedProcess(title) {
